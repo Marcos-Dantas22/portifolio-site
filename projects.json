@@ -1,0 +1,45 @@
+[
+    {   
+        "projectImagePrincipal": "../assets/projects-images/project1-image-principal.png",
+        "projectImagesSecundary": ["../assets/projects-images/project1-image-secundaries1.png", "../assets/projects-images/project1-image-secundaries2.png"],
+        "projectName": "Banco de Sangue",
+        "projectDate": "30, Setembro 2022  ",
+        "projectCategory": "Web Design",
+        "projectClient": "Projeto Pessoal",
+        "projectLink": "https://blood-bank-two.vercel.app",
+        "projectResume": [
+            "No coração do nosso projeto está a criação de uma plataforma digital inovadora dedicada ao gerenciamento eficiente e transparente de doações de sangue. Com um sistema robusto e acessível, nossa plataforma busca não apenas facilitar a doação de sangue, mas também assegurar um controle rigoroso e preciso de todo o processo, desde a coleta até a distribuição.",
+
+            "Hoje, mais do que nunca, é essencial ter um sistema que vá além das necessidades básicas e que ofereça soluções eficazes para a gestão de doações de sangue. Em vez de se prender a modismos ou tendências passageiras, nossa plataforma é construída com a intenção de resolver desafios reais e contínuos. ",
+
+            "Nossa plataforma oferece desde o agendamento de doações e rastreamento de estoques até relatórios analíticos detalhados, cada elemento foi cuidadosamente desenvolvido para atender às necessidades dos doadores e das instituições de saúde.",
+            
+            "Ao adotar nossa plataforma, você participa ativamente de um movimento que visa transformar a gestão de doações de sangue. Escolha se envolver sem hesitar, dedique-se ao bem-estar coletivo, e confie em nossa tecnologia para tornar o processo mais eficiente e impactante."
+        ],
+        "projectKeyWords": ["Gerenciamento de Doações.", " Plataforma Digital.", "Controle de Estoque.", 
+                            "Eficiência em Saúde."    
+        ]
+    },
+    { 
+        "projectImagePrincipal": "../assets/projects-images/project2-image-principal.png",  
+        "projectImagesSecundary": ["../assets/projects-images/project2-image-secundaries1.png", "../assets/projects-images/project2-image-secundaries2.png"],
+        "projectName": "Adivinhe O Numero: Jogo",
+        "projectDate": "22, Abril 2024  ",
+        "projectCategory": "Game",
+        "projectClient": "Projeto Pessoal",
+        "projectLink": "https://guess-number-game2.netlify.app",
+        "projectResume": [
+            "Bem-vindo ao Guess Number, o jogo de adivinhação de números que testa suas habilidades de dedução e raciocínio lógico! Nossa plataforma online oferece um ambiente interativo e divertido para jogadores de todas as idades.",
+
+            "No Guess Number, não se trata apenas de adivinhar números, mas de se envolver em uma experiência de jogo envolvente que estimula o pensamento estratégico e a concentração. ",
+
+            "Nossa plataforma oferece uma série de recursos projetados para maximizar a diversão e a competitividade.",
+            
+            "Ao se juntar ao Guess Number, você se torna parte de uma comunidade de jogadores que adoram desafios mentais e diversão pura."
+        ],
+        "projectKeyWords": ["Desafio de Adivinhação.", " Jogo Interativo.", "Competição Online.", 
+                            "Pensamento Estratégico."    
+        ]
+    }
+    
+]

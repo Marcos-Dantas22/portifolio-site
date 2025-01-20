@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos Vinicius - Portifolio</title>
+    <link href="./output.css" rel="stylesheet">
+
+	<!-- Font awesome CDN-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+	<link rel="icon" type="image/x-icon" href="../assets/icons/favicon/favicon.ico">
+	
+<style>
+	html {
+		scroll-behavior: smooth;
+	}
+
+	/* animação de subida de div */
+	.hidden-up { 
+        opacity: 0;
+		transform: translateY(80px); 
+	}
+	.visible-up {
+		opacity: 1;
+		transform: translateY(0); 
+		transition: opacity 1s ease-out, transform 1s ease-out; 
+	}
+	/* animação de surgimento */
+	.hidden-fade {
+        opacity: 0; 
+	}
+	.visible-fade {
+		opacity: 1; 
+		transition: opacity 1s ease-in-out; 
+	}
+	#button-contact:hover span {
+		width: 100%;
+	}
+	
+	#item:hover .bord-color {
+		opacity: 1;
+		/* filter: blur(8px); */
+	}
+
+	.bord-color {
+		width: 92%;
+		height: 2px; /* Altura atualizada */
+		background: #FF6803FF;
+		/* background: linear-gradient(to top, #FF6803FF 0%, rgba(255, 104, 3, 0) 100%);  */
+		border-radius: 4px;
+		position: absolute;
+		left: 4%;
+		bottom: -1px;
+		z-index: 0;
+		opacity: 0;
+		transition: opacity .4s, filter .4s; /* Transição suave para a opacidade e filtro */
+	}
+	
+	/* mobile mod */ 
+	@media (max-width: 1365px) {
+		.min-h-custom {
+			min-height: calc(90% - 80px);
+		}
+
+		#section-main-mod {
+			flex-direction: column;
+		}
+		#div-image-info {
+			width: auto;
+			border-end-start-radius: 0px;
+			border-start-end-radius: 1rem;
+		}
+		#div-text-info {
+			width: auto;
+			padding-top: 0px;
+			border-end-start-radius: 1rem;
+			border-start-end-radius: 0px;
+		}
+		#section-second-mod {
+			border-start-end-radius: 1rem;
+		}
+		img {
+			width: 100%;
+		}
+		#div-image-info h5 {
+			font-size: 25px;
+		}
+		#div-image-info p {
+			font-size: 18px;
+			margin-top: 10px;
+		}
+		
+		#about-section {
+			flex-direction: column;
+			gap: 5rem;
+		}
+		#animate-div-3 {
+			align-self: baseline;
+		}
+		/* #cards-certificated {
+			flex-direction: column;
+			gap: 5rem;
+		} */
+		#projects-section {
+			flex-direction: column;
+			gap: 0px;
+		}
+		#title-projects-section {
+			align-self: baseline;
+		}
+		#projects-section a {
+			margin-top: 10px;
+			align-self: baseline;
+			margin-left: 0px;
+		}
+		/* #animate-div-6 {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		} */
+		.image-proj {
+			height: 300px;
+			
+		}
+		.max-width-card-mob {
+			max-width: 900px;
+		}
+		/* #contact-section {
+			flex-direction: column;
+			gap: 95px;
+		}
+		#animate-div-7 {
+			align-self: baseline;
+		} */
+		/* #contact-form div:first-of-type {
+			flex-direction: column;
+		}
+		#contact-width-mob {
+			width: 100%;
+		} */
+
+		.nav-options {
+			display: none;
+		}
+		#menu-button-div {
+			display: flex !important;
+		}
+		#text-border-topic {
+			border: none;
+		}
+    }
+	@media (max-width: 910.67px) {
+		#animate-div-6 {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+		#cards-certificated {
+			flex-direction: column;
+			gap: 5rem;
+		}
+		#contact-form div:first-of-type {
+			flex-direction: column;
+		}
+		#contact-width-mob {
+			width: 100%;
+		}
+		#contact-section {
+			flex-direction: column;
+			gap: 95px;
+		}
+		#animate-div-7 {
+			align-self: baseline;
+		}
+	}
+	@media (max-width: 683px) {
+		#animate-div-2 {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+		#skills-grid-elements {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+		#div-topic-mini {
+			flex-direction: column;
+			gap: 19px;
+			padding-top: 0;
+			align-items: start;
+		}
+
+		#div-text-info h2 {
+			font-size: 40px;
+			line-height: 45px;
+		}		
+		#menu-button {
+			width: 70%;
+		}
+		
+	}
+	@media (max-width: 460px) {
+		#header-section div:first-of-type {
+			font-size: 20px;
+			max-width: 88px;
+			line-height: 25px;
+		}
+		#div-image-info {
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+		}
+		#div-image-info div:first-of-type {
+			padding-left: 5px;
+			padding-right: 5px;
+	        margin-top: 0px;
+		}
+		main {
+			width: 90% !important;
+		}
+		#div-text-info div:first-of-type {
+			padding: 0;
+		}
+		#div-text-info h2 {
+			font-size: 30px;
+			line-height: 35px;
+		}
+		#text-topic-mini-2 {
+			width: 130%;
+			font-size: 15px;
+		}
+		#div-topic-mini h5 {
+			font-size: 50px;
+		}
+		.text-topic-mini-1{
+			font-size: 15px;
+		}
+		#div-topic-mini {
+			padding: 0px;
+			padding-top: 55px;
+		}
+		#div-topic-mini button {
+			font-size: 14px;
+		}
+		#animate-div p, #animate-div-3 p, #projects-section p {
+			font-size: 24px;
+		}
+		.grow-mobile-wd {
+			padding: 8%;
+			padding-top: 5rem;
+		}
+		#animate-div-2 h5 {
+			font-size: 14px;
+		}
+		#animate-div-2 p {
+			font-size: 12px;
+		}
+		#skills-grid-elements h5 {
+			font-size: 15px;
+		}
+		.text-time-value {
+			font-size: 10px;
+			margin: -10px -4px 0 0;
+			padding: 0px 5px 0px 5px;
+		}
+		#skills-grid-elements #item {
+			padding: 24px;
+		}
+		#skills-grid-elements #item img {
+			width: 50%;
+			margin-left: 46px;
+		}
+		footer {
+			font-size: 10px;
+			padding: 1rem !important;
+		}
+		
+	}
+
+	/* Barra lateral oculta inicialmente */
+	.mobile-nav {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.9);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transition: left 0.3s ease;
+		z-index: 1000;
+	}
+
+	/* Itens de navegação */
+	.mobile-nav ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.mobile-nav li {
+		margin: 15px 0;
+	}
+
+	.mobile-nav a {
+		color: white;
+		text-decoration: none;
+		font-size: 20px;
+		font-weight: bold;
+		transition: color 0.3s ease;
+	}
+
+	.mobile-nav a:hover {
+		color: #f39c12;
+	}
+
+	/* Quando a barra está aberta */
+	.mobile-nav.open {
+		left: 0;
+	}
+
+	/* Botão de menu */
+	.btnMenu {
+		position: fixed;
+		top: 15px;
+		right: 15px;
+		z-index: 1100;
+		cursor: pointer;
+	}
+
+	#loading-screen {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: black; /* Cor de fundo da tela de carregamento */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1000;
+	}
+
+	/* Imagem de carregamento */
+	#loading-screen img {
+		width: 100px; /* Ajuste o tamanho conforme necessário */
+		height: auto;
+	}
+
+	/* Esconde o conteúdo principal até o carregamento */
+	#site-content {
+		display: none;
+	}
+	
+</style>
+</head>
+<body>
+	<!-- Tela de carregamento -->
+	<div id="loading-screen" class="fixed inset-0 bg-black flex flex-col items-center justify-center z-50 transition-opacity duration-500">
+		<img src="../assets/icons/loading.gif" alt="Carregando..." />
+		<p class="text-white mt-4">Carregando...</p>
+	</div>
+
+	<!-- Tela Principal -->
+    <header class="site-content flex-1 flex justify-between 
+				items-center w-10/12 max-h-28 pt-8 pb-8 min-[1400px]:max-w-[1280px]" id="header-section">
+		<div class="font-sora font-bold tracking-tighter text-2xl ">MARCOS DANTAS</div>
+		
+		<div class="font-sora tracking-[2px] uppercase font-light text-xs ml-auto nav-options">
+            <ul class="flex justify-end">
+                <li class="tracking-[1.4px] text-[12px] px-4 py-5 uppercase hover:cursor-pointer">
+                    <a href="index.html#header-section" class="transition duration-300 ease-in-out">home</a></li>
+                <li class="tracking-[1.4px] text-[12px] px-4 py-5 uppercase hover:cursor-pointer">
+                    <a href="index.html#soluctions-section" class="transition duration-300 ease-in-out">serviços</a></li>
+                <li class="tracking-[1.4px] text-[12px] px-4 py-5 uppercase hover:cursor-pointer">
+                    <a href="index.html#about-section" class="transition duration-300 ease-in-out">sobre</a></li>
+                <li class="tracking-[1.4px] text-[12px] px-4 py-5 uppercase hover:cursor-pointer">
+                    <a href="index.html#projects-section" class="transition duration-300 ease-in-out">projetos</a></li>
+                <li class="tracking-[1.4px] text-[12px] px-4 py-5 uppercase hover:cursor-pointer">
+                    <a href="index.html#contact-section" class="transition duration-300 ease-in-out">contatos</a></li>
+            </ul>	
+		</div>
+
+		<!-- Botão Mobile -->
+		<div class="btnMenu btnMenu_open" id="menu-button-div" style="display: none;">
+			<a onclick="openCloseMenuMobile()">
+				<img id="menu-button" src="../assets/icons/menu2.svg" width="30" alt="">
+			</a>
+		</div>
+	
+		<!-- Barra Lateral de Navegação -->
+		<nav id="mobile-nav" class="mobile-nav">
+			<ul>
+				<li><a href="index.html#header-section">Home</a></li>
+				<li><a href="index.html#soluctions-section">Serviços</a></li>
+				<li><a href="index.html#about-section">Sobre</a></li>
+				<li><a href="index.html#projects-section">Projetos</a></li>
+				<li><a href="index.html#contact-section">Contatos</a></li>
+			</ul>
+		</nav>
+
+    </header>
+    <main class="flex-1 w-10/12 min-[1400px]:max-w-[1280px]">
+		<section class="mt-9">
+			<div class="bg-color-main-background px-10 pt-20 overflow-hidden border-b border-solid 
+			border-b-neutral-800 p-[100px] grow-mobile-wd">
+				<div class="flex items-center justify-center gap-40" id="projects-section">
+					<div class="text-center">
+						<h5 class="tracking-[1.4px] text-sm uppercase text-gray-300 opacity-[.7]">
+							Projetos
+					   </h5>
+					   <p class="text-[33px] leading-[1.2] max-w-[25rem] mt-4 font-medium">
+						Veja todos os meus <span class="text-color-primary">projetos</span> 
+					   </p> 						
+					</div>
+				</div>
+				<div class="grid grid-cols-2 gap-7 mt-20" id="animate-div-6">
+					<div class="flex flex-col gap-4 relative group">
+						<span class="border border-solid border-color-main-background max-w-[600px] p-1 
+						rounded-lg group-hover:border-color-primary transition-colors max-width-card-mob" >
+							<a href="project-details.html?project=project1"><img class="image-proj" src="../assets/projects-images/project1-image-principal.png" class="rounded-lg 
+								group-hover:border-color-primary transition-colors" width="auto" alt=""></a>
+						</span>
+						<div class="text-[12px] border border-solid border-neutral-700 rounded-full ml-4 py-1 px-3 
+						text-center max-w-[80px] group-hover:bg-color-primary transition-colors">
+							backend
+						</div>
+						<div class="font-medium text-[18px] text-white ml-4 max-w-40">
+							Banco de Sangue
+						</div>
+						<span class="absolute right-4 bottom-4">
+							<a href="project-details.html?project=project1">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler 
+								icon-tabler-arrow-up-right group-hover:stroke-color-primary transition-colors" 
+								width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" 
+								fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+									<path d="M17 7l-10 10" />
+									<path d="M8 7l9 0l0 9" />
+								</svg>
+							</a>
+						</span>
+					</div>
+
+					<div class="flex flex-col gap-4 relative group">
+						<span class="border border-solid border-color-main-background max-w-[600px] p-1 
+						rounded-lg group-hover:border-color-primary transition-colors max-width-card-mob">
+							<a href="project-details.html?project=project2"><img class="image-proj" 
+								src="../assets/projects-images/project2-image-principal.png" class="rounded-lg 
+								group-hover:border-color-primary transition-colors" width="auto" alt=""></a>
+						</span>
+						<div class="text-[12px] border border-solid border-neutral-700 rounded-full ml-4 py-1 px-3 
+						text-center max-w-[80px] group-hover:bg-color-primary transition-colors">
+							game
+						</div>
+						<div class="font-medium text-[18px] text-white ml-4 max-w-40">
+							Adivinhe O Numero: Jogo
+						</div>
+						<span class="absolute right-4 bottom-4">
+							<a href="project-details.html?project=project2">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler 
+								icon-tabler-arrow-up-right group-hover:stroke-color-primary transition-colors" 
+								width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" 
+								fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+									<path d="M17 7l-10 10" />
+									<path d="M8 7l9 0l0 9" />
+								</svg>
+							</a>
+						</span>
+					</div>
+				</div>
+			</div>
+			
+		</section>    
+    </main>
+	<script>
+		// Aguarda o carregamento completo da página
+		window.onload = function () {
+			const loadingScreen = document.getElementById("loading-screen");
+			const siteContent = document.getElementById("site-content");
+
+			// Adiciona a transição de opacidade
+			loadingScreen.classList.add("opacity-0");
+
+			// Aguarda o fim da transição antes de remover a tela de carregamento
+			setTimeout(() => {
+				loadingScreen.style.display = "none";
+				siteContent.style.display = "block";
+			}, 1000); // O mesmo valor da duração da transição (500ms)
+		};
+		function openCloseMenuMobile() {
+			// Seleciona o menu e o botão
+			const nav = document.getElementById("mobile-nav");
+			const menuButton = document.getElementById("menu-button");
+
+			// Alterna a classe 'open' na barra de navegação
+			nav.classList.toggle("open");
+
+			// Troca o ícone do botão
+			if (nav.classList.contains("open")) {
+				menuButton.src = "../assets/icons/menu-close.svg"; // Ícone de fechar
+			} else {
+				menuButton.src = "../assets/icons/menu2.svg"; // Ícone de abrir
+			}
+		}
+	</script>
+	<footer class="p-8 ">
+		© 2024 desenvolvido por <span 
+		class="text-color-primary underline">Marcos Vinicius</span>
+        <nav></nav>
+    </footer>
+</body>
+</html>
